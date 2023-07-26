@@ -1,4 +1,5 @@
 import React from "react";
+import mySvg from './assets/Frame.svg'
 
 interface ClinicProps {
     recruiting: boolean;
@@ -29,21 +30,22 @@ const Clinic: React.FC<ClinicProps> = ({
                     {recruitingText}
                 </div>
             </div>
-            <div className="flex items-baseline">
-                <div
-                    className="border-2 border-red-600 rounded-full w-6 h-6 flex justify-center items-center text-red-600 font-bold text-md mr-2"
-                    style={{ minWidth: "1.5rem" }}
-                >
-                    H
+            <div className="flex items-start mt-4">
+                <div className="flex items-center flex-shrink-0">
+                    <div className="mt-2">
+                        <img src={mySvg} alt="Facility logo" className="w-5 h-5 text-red-600 fill-current" />
+                    </div>
                 </div>
                 <a
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-bold text-md mb-1 text-left"
-                    style={{ marginTop: "1.7rem", lineHeight: "1.2" }}
+                    className="font-bold text-md mb-1 text-left ml-1"
+                    style={{ lineHeight: "1.2" }}
                 >
-                    {name}
+                    <div className="mt-2">
+                        {name}
+                    </div>
                 </a>
             </div>
             <div className="text-gray-500 text-opacity-50 text-sm absolute top-2 right-2">

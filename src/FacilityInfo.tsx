@@ -1,4 +1,5 @@
 import React from "react";
+import mySvg from './assets/Frame.svg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faGlobe, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
@@ -18,8 +19,8 @@ const FacilityCard: React.FC<FacilityProps> = ({ name, address, emailAddress, we
             {/* Triangle on the center bottom */}
             <div className="triangle-bottom absolute bottom-0 left-0 right-0 mx-auto w-0 h-0 border-t-4 border-transparent border-white"></div>
             <div className="flex justify-center items-center absolute top-0 left-0 right-0 transform -translate-y-1/2">
-                <div className="border-2 border-red-600 rounded-full w-8 h-8 flex justify-center items-center text-red-600 font-bold text-lg">
-                    H
+                <div className="w-8 h-8">
+                    <img src={mySvg} alt="Facility logo" />
                 </div>
             </div>
             <h3 className="text-2xl font-semibold mb-1 break-words pt-4">
